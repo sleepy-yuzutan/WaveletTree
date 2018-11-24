@@ -9,9 +9,9 @@ Wavelet-Tree project implemented by C#
 ## Development Environment
 
 - IDE
-  - Visual Studio 2017 (15.8.7)
+    - Visual Studio 2017 (15.8.7)
 - .NET
-  - .NET Standard 2.0
-  - .NET Core 2.1
-  - C# 7.3
-  - MSTest
+    - .NET Standard 2.0
+    - .NET Core 2.1
+    - C# 7.3
+    - MSTest
