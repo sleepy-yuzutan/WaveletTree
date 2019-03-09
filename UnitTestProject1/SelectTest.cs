@@ -1,154 +1,141 @@
-using System;
+ï»¿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SleepyYuzutan.WaveletTree;
 
 namespace WaveletTreeTest
 {
     [TestClass]
-    public class RankTest
+    public class SelectTest
     {
         private string _testString1 = "abcdeabcdeaaaaabbbbcccdde";
         private string[] _testStringArray1 = "that that is is that that is not is not is that it it is".Split(' ');
-        private string[] _testStringArray2 = { "", "", "", "", "", null, "", };
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'a'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'a'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_1()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('a');
-            Assert.IsTrue(count == 7);
+            var pos = obj.Select('a');
+            Assert.IsTrue(pos == 0);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'b'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'b'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_2()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('b');
-            Assert.IsTrue(count == 6);
+            var pos = obj.Select('b');
+            Assert.IsTrue(pos == 1);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'c'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'c'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_3()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('c');
-            Assert.IsTrue(count == 5);
+            var pos = obj.Select('c');
+            Assert.IsTrue(pos == 2);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'d'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'d'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_4()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('d');
-            Assert.IsTrue(count == 4);
+            var pos = obj.Select('d');
+            Assert.IsTrue(pos == 3);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'e'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'e'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_5()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('e');
-            Assert.IsTrue(count == 3);
+            var pos = obj.Select('e');
+            Assert.IsTrue(pos == 4);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'g'</c>‚ğ’T‚·
+        /// <c>testString1</c>ã‹ã‚‰<c>'g'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_6()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('g');
-            Assert.IsTrue(count == 0);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => obj.Select('g'));
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'a'</c>‚ğ’T‚· (10•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ã‹ã‚‰<c>'a'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_7()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('a', 10);
-            Assert.IsTrue(count == 2);
+            var pos = obj.Select('a', 1);
+            Assert.IsTrue(pos == 5);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'b'</c>‚ğ’T‚· (20•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ã‹ã‚‰<c>'b'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_8()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('b', 20);
-            Assert.IsTrue(count == 6);
+            var pos = obj.Select('b', 3);
+            Assert.IsTrue(pos == 16);
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'c'</c>‚ğ’T‚· (50•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ã‹ã‚‰<c>'c'</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod1_9()
         {
             var obj = WaveletTree.Create(_testString1);
-            var count = obj.Rank('c', 50);
-            Assert.IsTrue(count == 5);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => obj.Select('c', 50));
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>"that"</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ã‹ã‚‰<c>"that"</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod2_1()
         {
             var obj = WaveletTree.Create(_testStringArray1);
-            var count = obj.Rank("that");
-            Assert.IsTrue(count == 5);
+            var pos = obj.Select("that");
+            Assert.IsTrue(pos == 0);
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>"eat"</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ã‹ã‚‰<c>"eat"</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod2_2()
         {
             var obj = WaveletTree.Create(_testStringArray1);
-            var count = obj.Rank("eat");
-            Assert.IsTrue(count == 0);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => obj.Select("eat"));
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>null</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ã‹ã‚‰<c>null</c>ã‚’æ¢ã™
         /// </summary>
         [TestMethod]
         public void TestMethod2_3()
         {
             var obj = WaveletTree.Create(_testStringArray1);
-            Assert.ThrowsException<ArgumentNullException>(() => obj.Rank(null));
-        }
-
-        /// <summary>
-        /// <c>testStringArray2</c>‚ğƒEƒF[ƒuƒŒƒbƒg–Ø‚É•ÏŠ·
-        /// </summary>
-        [TestMethod]
-        public void TestMethod3_1()
-        {
-            Assert.ThrowsException<ArgumentNullException>(() => WaveletTree.Create(_testStringArray2));
+            Assert.ThrowsException<ArgumentNullException>(() => obj.Select(null));
         }
     }
 }

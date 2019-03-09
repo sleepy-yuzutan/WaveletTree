@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaveletTreeTest", "UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{33DE6173-44B9-47FF-96D9-3EF3C1F419A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWaveletTree", "IWaveletTree\IWaveletTree.csproj", "{9CD04148-AE9A-46CE-BED6-EB66AAA17B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{33DE6173-44B9-47FF-96D9-3EF3C1F419A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33DE6173-44B9-47FF-96D9-3EF3C1F419A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33DE6173-44B9-47FF-96D9-3EF3C1F419A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD04148-AE9A-46CE-BED6-EB66AAA17B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD04148-AE9A-46CE-BED6-EB66AAA17B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD04148-AE9A-46CE-BED6-EB66AAA17B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD04148-AE9A-46CE-BED6-EB66AAA17B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

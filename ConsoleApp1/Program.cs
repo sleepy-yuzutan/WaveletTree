@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WaveletTreeNS;
+using System.Diagnostics;
+using SleepyYuzutan.WaveletTree;
 
 namespace ConsoleApp1
 {
@@ -13,8 +14,9 @@ namespace ConsoleApp1
         {
             try
             {
-                var array = new[] { "", "", "", "", "", null, "" };
+                var array = "kjwdlks;k:omewaivpowvmjaiefjcea";
                 var obj = WaveletTree.Create(array);
+                Console.WriteLine(obj.Select('k', 1));
             }
             catch (ArgumentNullException e)
             {
@@ -26,7 +28,7 @@ namespace ConsoleApp1
             }
             finally
             {
-                System.Diagnostics.Debugger.Break();
+                Debugger.Break();
             }
         }
     }
