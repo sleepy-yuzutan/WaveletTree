@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SleepyYuzutan.WaveletTree;
 
@@ -12,7 +12,7 @@ namespace WaveletTreeTest
         private string[] _testStringArray2 = { "", "", "", "", "", null, "", };
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'a'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'a'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_1()
@@ -23,7 +23,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'b'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'b'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_2()
@@ -34,7 +34,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'c'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'c'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_3()
@@ -45,7 +45,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'d'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'d'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_4()
@@ -56,7 +56,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'e'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'e'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_5()
@@ -67,7 +67,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'g'</c>‚ğ’T‚·
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'g'</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod1_6()
@@ -78,7 +78,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'a'</c>‚ğ’T‚· (10•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'a'</c>ï¿½ï¿½Tï¿½ï¿½ (10ï¿½ï¿½ï¿½ï¿½ï¿½Ú‚Ü‚ï¿½)
         /// </summary>
         [TestMethod]
         public void TestMethod1_7()
@@ -89,7 +89,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'b'</c>‚ğ’T‚· (20•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'b'</c>ï¿½ï¿½Tï¿½ï¿½ (20ï¿½ï¿½ï¿½ï¿½ï¿½Ú‚Ü‚ï¿½)
         /// </summary>
         [TestMethod]
         public void TestMethod1_8()
@@ -100,7 +100,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testString1</c>‚©‚ç<c>'c'</c>‚ğ’T‚· (50•¶š–Ú‚Ü‚Å)
+        /// <c>testString1</c>ï¿½ï¿½ï¿½ï¿½<c>'c'</c>ï¿½ï¿½Tï¿½ï¿½ (50ï¿½ï¿½ï¿½ï¿½ï¿½Ú‚Ü‚ï¿½)
         /// </summary>
         [TestMethod]
         public void TestMethod1_9()
@@ -111,7 +111,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>"that"</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ï¿½ï¿½ï¿½ï¿½<c>"that"</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod2_1()
@@ -122,7 +122,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>"eat"</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ï¿½ï¿½ï¿½ï¿½<c>"eat"</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod2_2()
@@ -133,7 +133,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testStringArray1</c>‚©‚ç<c>null</c>‚ğ’T‚·
+        /// <c>testStringArray1</c>ï¿½ï¿½ï¿½ï¿½<c>null</c>ï¿½ï¿½Tï¿½ï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod2_3()
@@ -143,7 +143,7 @@ namespace WaveletTreeTest
         }
 
         /// <summary>
-        /// <c>testStringArray2</c>‚ğƒEƒF[ƒuƒŒƒbƒg–Ø‚É•ÏŠ·
+        /// <c>testStringArray2</c>ï¿½ï¿½Eï¿½Fï¿½[ï¿½uï¿½ï¿½ï¿½bï¿½gï¿½Ø‚É•ÏŠï¿½
         /// </summary>
         [TestMethod]
         public void TestMethod3_1()
